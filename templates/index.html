@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brain Tumor Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Brain Tumor Detection</h1>
+            <p>Early detection of brain tumors can save lives. Upload MRI scans to detect tumors using our AI-powered model.</p>
+        </div>
+    </header>
+
+    <section class="upload-section">
+        <div class="container">
+            <h2>Upload MRI Scan</h2>
+            <form id="upload-form" action="/predict" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" accept="image/*" required>
+                <button type="submit">Upload & Detect</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="result-section" id="result-section">
+        <div class="container">
+            <h2>Detection Result</h2>
+            <p id="result-text">Please upload an MRI scan to get the result.</p>
+            <img id="result-image" src="" alt="" style="display:none;">
+            <p id="result-description" style="font-size: 1rem; color: #555;"></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+                <p>&copy; Brain Tumor Detection made by Himanshu Singh.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
