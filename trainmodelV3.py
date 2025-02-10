@@ -9,7 +9,7 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 
 
-data_dir = r"C:\Users\HP\Desktop\Himanshu Singh\DataSets\brain_tumor_dataset"  
+data_dir = r"Path to your dataset"  
 train_dir = os.path.join(data_dir, "Training")
 test_dir = os.path.join(data_dir, "Testing")
 
